@@ -22,6 +22,7 @@ The solution in this repository assumes some additional (unstatement) requiremen
 
 - The form should validate user input and provide associated error messages
 - The form and associated error messages should be accessible
+- The form should be responsive
 
 Additionally, it's assumed that a "nice to have" is to validate that the provided GitHub repository URL actually exists.
 
