@@ -8,8 +8,8 @@
   </head>
   <body>
     <main>
-      <form>
-        <h1>Clearviction challenge</h1>
+      <form novalidate>
+        <h1>️Clearviction challenge</h1>
         <section>
           <label for="email">Email address</label>
           <input id="email" name="email" type="email" required />
@@ -18,10 +18,10 @@
           <label for="repo">GitHub repo URL</label>
           <input id="repo" name="githubRepoUrl" type="text" required />
         </section>
-        <button type="submit">Validate & Submit</button>
+        <section id="error-message" aria-live="polite"></section>
+        <button type="submit">Submit</button>
       </form>
     </main>
-
     <script src="./sendEmail.js"></script>
   </body>
 </html>

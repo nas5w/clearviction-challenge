@@ -27,19 +27,21 @@ main {
   background-color: var(--brand-purple);
   border-radius: var(--radius);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 35rem;
+  max-width: 100%;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 35rem;
-  max-width: 100%;
+
   padding: var(--view-padding);
 }
 
 form > h1 {
   margin: 0;
+  font-size: 1.5rem;
 }
 
 form > section > label {
@@ -73,13 +75,28 @@ form > button {
   padding: var(--component-padding);
   width: 100%;
   font-size: var(--font-large);
-  cursor: pointer;
   border-radius: 999px;
-  transition: background-color var(--transition-duration) var(--transition-fn);
+  transition: all var(--transition-duration) var(--transition-fn);
   font-weight: 600;
   border: 0;
 }
 
-form > button:hover {
+form > button:disabled {
+  opacity: 0.8;
+}
+
+form > button:not(:disabled) {
+  cursor: pointer;
+}
+
+form > button:not(:disabled):hover {
   background-color: var(--brand-green);
+}
+
+#error-message {
+  background-color: #ffc0cb;
+  color: #8b0000;
+  padding: var(--component-padding);
+  border-radius: var(--radius);
+  display: none;
 }
